@@ -5,3 +5,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+.todo{
+	float: left;
+	shape-outside: polygon(78.48% 437px, 106.00% 90.77%, 439px 12.69%);
+	
+}
