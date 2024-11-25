@@ -6,19 +6,24 @@
 	box-sizing: border-box;
 }
 
-.todo{
+.target{
 	float: left;
 	shape-outside: polygon(78.48% 437px, 106.00% 90.77%, 439px 12.69%);
 	
 }
 
-.todo1{
+.contract{
 	float: right;
 	shape-outside: polygon(29.46% 157px, -11.58% 81.72%, -20px 9.61%);
 	
 }
 
-.todo2{
+.invite{
 	float: right;
 	shape-outside: polygon(-8.43% 520px, -11.58% 81.72%, 66px 13.42%);
+}
+
+.results{
+	float: left;
+	shape-outside: polygon(96.45% 214px, 107.17% 61.47%, 386px 14.14%);
 }
