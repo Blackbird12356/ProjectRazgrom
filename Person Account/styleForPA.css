@@ -1,0 +1,37 @@
+body{
+   margin: 70px;
+}
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container1 {
+
+}
+
+.container2 {
+    border: 5px solid #0763EC;
+    padding-top: 20px;
+    padding-bottom: ;
+    padding-left: 30px;
+    padding-right: 40px;
+    color: white;
+}
+
+.contract{
+    color: white;
+    padding: 10px;
+    padding-bottom: 40px;
+    padding-right: 460%;
+    margin: 40px;
+    border: 3px solid #0763EC;
+}
+
+
+.rounded-full {
+    height: 100px;
+    width: 100px; 
+}
