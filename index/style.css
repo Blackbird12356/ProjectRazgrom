@@ -27,3 +27,8 @@
 	float: left;
 	shape-outside: polygon(96.45% 214px, 107.17% 61.47%, 386px 14.14%);
 }
+
+.icons{
+	display: flex;
+	justify-content: space-between;
+}
