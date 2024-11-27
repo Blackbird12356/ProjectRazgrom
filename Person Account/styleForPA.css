@@ -6,6 +6,7 @@ body{
 .main {
     display: flex;
     justify-content: space-between;
+    background-color: gray;
 }
 
 .container1 {
@@ -15,7 +16,6 @@ body{
 .container2 {
     border: 5px solid #0763EC;
     padding-top: 20px;
-    padding-bottom: ;
     padding-left: 30px;
     padding-right: 40px;
     color: white;
@@ -36,4 +36,19 @@ body{
 .rounded-full {
     height: 100px;
     width: 100px; 
+}
+
+.logout-button {
+    margin: 10px;
+    background-color: #0763EC; /* Красный цвет */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #0651c1;
 }
