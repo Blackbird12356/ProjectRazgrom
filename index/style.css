@@ -6,15 +6,32 @@
 	box-sizing: border-box;
 }
 
-@media only screen and (min-width: 1024px){
-	.icons {
-		justify-content: space-between;
-		max-width: 10rem;
-		align-items: center;
-		margin-top: -26rem;
-		margin-left: 6rem;
-	  }
+
+@media only screen and (min-width: 1024px) {
+    .icons {
+		margin: auto;
+        margin-left: 3rem !important;
+		padding-top: 12rem;
+		max-width: 9rem !important;
+    }
+    .blue {
+        margin: auto;
+        width: 100% !important;
+    }
 }
+
+@media only screen and (min-width: 1880px) {
+    .icons {
+        margin-top: -27rem !important;
+		margin-left: 12rem !important;
+		gap: 2rem;
+    }
+    .blue {
+        margin: auto;
+        width: 89% !important;
+    }
+}
+
 
 .target{
 	float: left;
