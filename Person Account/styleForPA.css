@@ -9,7 +9,7 @@ body{
 }
 
 .container1 {
-
+   width: 300px;
 }
 
 .container2 {
@@ -19,13 +19,15 @@ body{
     padding-left: 30px;
     padding-right: 40px;
     color: white;
+    
 }
 
 .contract{
+    background-color: gray;
     color: white;
     padding: 10px;
     padding-bottom: 40px;
-    padding-right: 460%;
+    padding-right: 700px;
     margin: 40px;
     border: 3px solid #0763EC;
 }
