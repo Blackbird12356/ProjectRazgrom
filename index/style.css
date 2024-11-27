@@ -6,6 +6,16 @@
 	box-sizing: border-box;
 }
 
+@media only screen and (min-width: 1024px){
+	.icons {
+		justify-content: space-between;
+		max-width: 10rem;
+		align-items: center;
+		margin-top: -26rem;
+		margin-left: 6rem;
+	  }
+}
+
 .target{
 	float: left;
 	shape-outside: polygon(78.48% 437px, 106.00% 90.77%, 439px 12.69%);
@@ -33,10 +43,13 @@
 	max-width: 10rem;
 	align-items: center;
 	margin-top: -26rem;
-	margin-left: 6rem;
+	margin-left: 12rem;
+	gap: 2rem;
   }
 
 .blue{
+	margin: auto;
 	padding-top: 20rem;
 	margin-top: 5rem;
+	width: 89%;
 }
