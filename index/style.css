@@ -29,13 +29,11 @@
 }
 
 .icons {
-	display: flex;
 	justify-content: space-between;
 	max-width: 10rem;
-	gap: 48px;
-	margin-left: 289px;
 	align-items: center;
 	margin-top: -26rem;
+	margin-left: 6rem;
   }
 
 .blue{
