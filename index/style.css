@@ -31,14 +31,14 @@
 .icons {
 	display: flex;
 	justify-content: space-between;
-	gap: 33rem; /* Расстояние между элементами */
-	max-width: 15rem;
-	margin-left: 5rem;
+	max-width: 10rem;
+	gap: 48px;
+	margin-left: 289px;
+	align-items: center;
+	margin-top: -26rem;
   }
-.text{
-	display: flex;
-	justify-content: space-between;
-	gap: 34rem; /* Расстояние между элементами */
-	max-width: 7rem;
-	margin-left: 3rem;
+
+.blue{
+	padding-top: 20rem;
+	margin-top: 5rem;
 }
