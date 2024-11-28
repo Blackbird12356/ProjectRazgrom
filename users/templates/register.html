@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/ForTailWindCSS/styleTW.css">
+    </head>
+
+
+<body>
+
+    <main class="wrapper">
+
+        <div class="auth-tabs">
+            <a href="authorization.html" id="login-tab" class="tab">Вход</a>
+            <a href="registration.html" id="register-tab" class="tab active">Регистрация</a>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="auth-box">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                <i class='bx bxs-user-circle'></i>
+            </div>
+
+            <div class="auth-box">
+                {{form.email.label_tag}}
+                {{form.email}}
+                <i class='bx bxl-gmail'></i>
+            </div>
+
+            <div class="auth-box">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="auth-box">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <button type="submit" class="btn"> Войти </button>
+            
+        </form>
+
+
+    </main>
+    
+</body>
+</html>

@@ -20,20 +20,29 @@
             <a href="registration.html" id="register-tab" class="tab active">Регистрация</a>
         </div>
 
-        <form action="">
-
+        <form method="POST">
+            {% csrf_token %}
             <div class="auth-box">
-                <input type="text" placeholder="Username">
+                {{ form.username.label_tag }}
+                {{ form.username }}
                 <i class='bx bxs-user-circle'></i>
             </div>
 
             <div class="auth-box">
-                <input type="text" placeholder="Email">
+                {{form.email.label_tag}}
+                {{form.email}}
                 <i class='bx bxl-gmail'></i>
             </div>
 
             <div class="auth-box">
-                <input type="password" placeholder="Password">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="auth-box">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
