@@ -23,27 +23,24 @@
         <form method="POST">
             {% csrf_token %}
             <div class="auth-box">
-                {{ form.username.label_tag }}
-                {{ form.username }}
+                <input type="text" placeholder="Username">
                 <i class='bx bxs-user-circle'></i>
             </div>
 
             <div class="auth-box">
-                {{form.email.label_tag}}
-                {{form.email}}
-                <i class='bx bxl-gmail'></i>
+                <input type="text" placeholder="Email">
+                <i class='bx bxs-user-circle'></i>
+            </div>
+
+
+            <div class="auth-box">
+                <input type="text" placeholder="Password">
+                <i class='bx bxs-user-circle'></i>
             </div>
 
             <div class="auth-box">
-                {{ form.password1.label_tag }}
-                {{ form.password1 }}
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-
-            <div class="auth-box">
-                {{ form.password2.label_tag }}
-                {{ form.password2 }}
-                <i class='bx bxs-lock-alt'></i>
+                <input type="text" placeholder="Repeat Password">
+                <i class='bx bxs-user-circle'></i>
             </div>
 
             <button type="submit" class="btn"> Войти </button>
