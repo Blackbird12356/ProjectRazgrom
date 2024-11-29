@@ -9,16 +9,36 @@
 
 @media only screen and (min-width: 1024px) {
     .icons {
-		margin: auto;
-        margin-left: 3rem !important;
-		padding-top: 12rem;
-		max-width: 9rem !important;
+        display: flex;
+        flex-direction: row; /* Горизонтальное расположение */
+        justify-content: space-around; /* Равномерное распределение по ширине */
+        align-items: center; /* Вертикальное выравнивание элементов */
+        margin: auto;
+        margin-left: 14rem !important;
+        padding-top: 10rem; /* Как у вас в изначальном коде */
+        max-width: 100%; /* Динамическая ширина */
+        gap: 2rem; /* Расстояние между элементами */
     }
     .blue {
         margin: auto;
-        width: 100% !important;
+        width: 100%; /* Используем всю ширину экрана */
+        padding: 2rem; /* Внутренний отступ */
+        border-radius: 5rem; /* Округление углов */
+    }
+    .icons img {
+        width: 120px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto; /* Сохраняем пропорции */
+    }
+    .icons p {
+        font-size: 1.2rem; /* Размер шрифта для текста */
+        margin-left: 0.5rem; /* Отступ от иконки */
+        text-align: left; /* Оставляем текст по левому краю */
     }
 }
+
+
+
+
 
 @media only screen and (min-width: 1880px) {
     .icons {
@@ -68,5 +88,5 @@
 	margin: auto;
 	padding-top: 20rem;
 	margin-top: 5rem;
-	width: 89%;
+	width: 95%;
 }
