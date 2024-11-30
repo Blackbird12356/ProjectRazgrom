@@ -68,21 +68,24 @@
     }
 }
 
-
-
-
-
-
-
 @media only screen and (min-width: 1880px) {
     .icons {
+        display: flex;
+        flex-direction: row;
         margin-top: -27rem !important;
-		margin-left: 12rem !important;
-		gap: 2rem;
+		margin-left: 16rem !important;
+		gap: 13rem !important;
     }
     .blue {
         margin: auto;
         width: 89% !important;
+    }
+
+    .icons p {
+        font-size: 1.2rem; /* Размер шрифта для текста */
+        margin-left: 0.5rem; /* Отступ от иконки */
+        text-align: left; /* Оставляем текст по левому краю */
+        margin-top: 1rem;
     }
 }
 
