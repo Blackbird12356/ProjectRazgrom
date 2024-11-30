@@ -16,19 +16,25 @@
         max-width: 100%; /* Динамическая ширина */
     }
     .blue {
-        width: 100%; /* Используем всю ширину экрана */
         padding: 2rem; /* Внутренний отступ */
         border-radius: 5rem; /* Округление углов */
     }
     .icons img {
         width: 80px; /* Устанавливаем фиксированный размер для иконок */
         height: auto; /* Сохраняем пропорции */
+        margin-left: 4rem;
     }
     .icons p {
         display: flex;
         font-size: 1rem; /* Размер шрифта для текста */
         text-align: center; /* Оставляем текст по левому краю */
-        padding-right: 8rem;
+        padding-right: 7rem;
+    }
+
+    .mountain {
+        width: 80px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto !important; /* Сохраняем пропорции */
+        margin-left: 1rem !important;
     }
 }
 
