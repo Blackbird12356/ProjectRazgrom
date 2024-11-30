@@ -6,6 +6,33 @@
 	box-sizing: border-box;
 }
 
+@media only screen and (max-width: 767px) {
+    .icons {
+        display: flex;
+        flex-direction: column; /* Горизонтальное расположение */
+        justify-content: space-around; /* Равномерное распределение по ширине */
+        align-items: center; /* Вертикальное выравнивание элементов */
+        margin-left: auto !important;
+        padding-top: 10rem; /* Как у вас в изначальном коде */
+        max-width: 100%; /* Динамическая ширина */
+    }
+    .blue {
+        margin: auto;
+        width: 100%; /* Используем всю ширину экрана */
+        padding: 2rem; /* Внутренний отступ */
+        border-radius: 5rem; /* Округление углов */
+    }
+    .icons img {
+        width: 80px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto; /* Сохраняем пропорции */
+    }
+    .icons p {
+        font-size: 1rem; /* Размер шрифта для текста */
+        text-align: center; /* Оставляем текст по левому краю */
+        margin: auto;
+        justify-items: center;
+    }
+}
 
 @media only screen and (min-width: 1024px) {
     .icons {
@@ -40,6 +67,8 @@
 
 
 
+
+
 @media only screen and (min-width: 1880px) {
     .icons {
         margin-top: -27rem !important;
@@ -52,28 +81,6 @@
     }
 }
 
-
-.target{
-	float: left;
-	shape-outside: polygon(78.48% 437px, 106.00% 90.77%, 439px 12.69%);
-	
-}
-
-.contract{
-	float: right;
-	shape-outside: polygon(29.46% 157px, -11.58% 81.72%, -20px 9.61%);
-	
-}
-
-.invite{
-	float: right;
-	shape-outside: polygon(-8.43% 520px, -11.58% 81.72%, 66px 13.42%);
-}
-
-.results{
-	float: left;
-	shape-outside: polygon(96.45% 214px, 107.17% 61.47%, 386px 14.14%);
-}
 
 .icons {
 	justify-content: space-between;
