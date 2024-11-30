@@ -17,7 +17,8 @@
     }
     .blue {
         padding: 2rem; /* Внутренний отступ */
-        border-radius: 5rem; /* Округление углов */
+        border-radius: 3rem; /* Округление углов */
+        padding-right: 5rem;
     }
     .icons img {
         width: 80px; /* Устанавливаем фиксированный размер для иконок */
