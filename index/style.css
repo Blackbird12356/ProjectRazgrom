@@ -6,6 +6,45 @@
 	box-sizing: border-box;
 }
 
+@media only screen and (max-width: 767px) {
+    .icons {
+        display: flex;
+        flex-direction: column; /* Горизонтальное расположение */
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-top: 10rem; /* Как у вас в изначальном коде */
+    }
+    .blue {
+        padding: 2rem; /* Внутренний отступ */
+        border-radius: 3rem; /* Округление углов */
+        max-width: 100%;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        
+    }
+    .icons img {
+        width: 80px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto; /* Сохраняем пропорции */
+        margin-right: auto !important;
+        margin-left: auto !important;
+
+        
+    }
+    .icons p {
+        display: flex;
+        font-size: 1rem; /* Размер шрифта для текста */
+        text-align: center; /* Оставляем текст по левому краю */
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .mountain {
+        width: 80px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto !important; /* Сохраняем пропорции */
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+}
 
 @media only screen and (min-width: 1024px) {
     .icons {
@@ -36,44 +75,27 @@
     }
 }
 
-
-
-
-
 @media only screen and (min-width: 1880px) {
     .icons {
+        display: flex;
+        flex-direction: row;
         margin-top: -27rem !important;
-		margin-left: 12rem !important;
-		gap: 2rem;
+		margin-left: 16rem !important;
+		gap: 13rem !important;
     }
     .blue {
         margin: auto;
         width: 89% !important;
     }
+
+    .icons p {
+        font-size: 1.2rem; /* Размер шрифта для текста */
+        margin-left: 0.5rem; /* Отступ от иконки */
+        text-align: left; /* Оставляем текст по левому краю */
+        margin-top: 1rem;
+    }
 }
 
-
-.target{
-	float: left;
-	shape-outside: polygon(78.48% 437px, 106.00% 90.77%, 439px 12.69%);
-	
-}
-
-.contract{
-	float: right;
-	shape-outside: polygon(29.46% 157px, -11.58% 81.72%, -20px 9.61%);
-	
-}
-
-.invite{
-	float: right;
-	shape-outside: polygon(-8.43% 520px, -11.58% 81.72%, 66px 13.42%);
-}
-
-.results{
-	float: left;
-	shape-outside: polygon(96.45% 214px, 107.17% 61.47%, 386px 14.14%);
-}
 
 .icons {
 	justify-content: space-between;
