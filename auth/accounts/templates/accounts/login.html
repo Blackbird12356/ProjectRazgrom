@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/ForTailWindCSS/styleTW.css">
+</head>
+
+<body>
+<main class="wrapper">
+
+    <!-- Навигационные вкладки -->
+    <div class="auth-tabs">
+        <a href="{% url 'login' %}" id="login-tab" class="tab active">Вход</a>
+        <a href="{% url 'register' %}" id="register-tab" class="tab">Регистрация</a>
+    </div>
+
+    <!-- Форма авторизации -->
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- Поле имени пользователя или email -->
+        <div class="auth-box">
+            {{ form.username }}
+            <i class='bx bxs-user-circle'></i>
+        </div>
+
+        <!-- Поле пароля -->
+        <div class="auth-box">
+            {{ form.password }}
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+
+        <!-- Кнопка входа -->
+        <button type="submit" class="btn">Войти</button>
+    </form>
+
+</main>
+</body>
+</html>
