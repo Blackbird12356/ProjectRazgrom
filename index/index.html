@@ -7,47 +7,63 @@
     <link rel="stylesheet" href="/ForTailWindCSS/styleTW.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="app.js"></script>
 </head>
 <body class="flex-auto relative w-full h-screen" style="background-color: #131313;">
     <header>
     <div>
         <nav class="flex items-center">
             <ul class="flex-1 text-center pt-5 text-xl font-normal">
-                <li class="list-none inline-block px-10 pb-5"><a href="index.html" class="no-underline text-white px-1">Домой</a></li>
-                <li class="list-none inline-block px-10"><a href="/O nas/o nas.html" class="no-underline text-white px-1">О нас</a></li>
-                <li class="list-none inline-block px-10"><a href="/Auth/registration.html" class="no-underline text-white px-1" style="background-color: #0763EC; border-radius: 2rem; padding: 0.6rem;">Войти | Регистрация</a></li>
+                <li class="list-none inline-block px-10 pb-5"><a href="index.html" class="no-underline text-white px-1 hover:text-[#90bbfc] transition duration-300">Домой</a></li>
+                <li class="list-none inline-block px-10"><a href="/O nas/o nas.html" class="no-underline text-white px-1 hover:text-[#90bbfc] transition duration-300">О нас</a></li>
+                <li class="list-none inline-block px-10"><a href="/Auth/registration.html" class="no-underline text-white bg-[#0763EC] hover:bg-[#073882] hover:text-white rounded-3xl px-3 py-3 transition duration-300">Войти | Регистрация</a></li>
                 <hr class="sm:m-auto mt-6" width="100%" size="2">
             </ul>
         </nav>
     </div>
     </header>
         <main class="h-dvh">
-            <div class=" text-white mt-36 font-serif pr-72 text-center ">
+            <div class="text-white mt-36 font-serif pr-72 text-center ">
                 <h1 class="text-3xl font-normal pr-52 px-7 lg:text-6xl lg:pr-7">Готовы ли вы наконец</h1>
                 <h1 class="text-3xl font-normal px-7 lg:text-6xl lg:pr-48 lg:pt-2 lg:px-8">придерживаться</h1>
                 <h1 class="text-3xl font-normal px-7  lg:text-6xl lg:pr-80 lg:pt-2 lg:px-4">своих целей?</h1>
                 <h1 class="text-3xl font-normal pr-52 px-7 pt-2 lg:text-6xl lg:pr-96 lg:pt-2 lg:px-1">Я обязуюсь</h1>
-                <h1 class="text-2xl font-semibold px-4 pt-6 sm:text-5xl sm:pr-40 sm:pt-9"><a href="/Auth/registration.html" class="no-underline text-white" style="background-color: #0763EC; border-radius: 1rem; padding: 0.5rem;">зарегистрироваться</a></h1>
+                <h1 class="text-2xl font-semibold px-4 pt-6 sm:text-5xl sm:pr-40 sm:pt-9">
+                    <a href="/Auth/registration.html" 
+                       class="no-underline text-white bg-[#0763EC] hover:bg-[#073882] hover:text-white rounded-xl px-2 py-1 transition-shadow duration-300 shadow-none hover:shadow-xl hover:shadow-[#073c82]">
+                      зарегистрироваться
+                    </a>
+                  </h1>
+                  
             </div>
                 <div class="text-white -mt-20 pt-96 font-serif text-center">
-                            <h1 class="text-2xl lg:text-6xl">Как это работает?</h1>
-                    <h1 class="text-2xl pt-44 text-center lg:text-4xl lg:pt-44">1. Определите цель.</h1>            
-                        <img class="target pt-12 h-auto max-w-xs lg:float-left" src="https://cdn-icons-png.flaticon.com/512/167/167552.png">
-                        <p class="text-sm pt-12 text-center font-normal lg:text-left lg:text-xl lg:pt-12 lg:pr-16">Хотите похудеть, освоить новый навык или сэкономить деньги? Четко сформулируйте цель и дедлайн: вместо «хочу похудеть» укажите «сбросить 5 кг за 3 месяца». Подумайте, почему это важно и как изменится ваша жизнь. Разбейте цель на этапы, чтобы отслеживать прогресс. Убедитесь, что она измерима, реалистична и достижима в срок. Чем яснее цель, тем проще её достичь.</p>
-                    <h1 class="text-2xl pt-96 lg:text-4xl lg:pt-96">2. Создайте контракт.</h1> 
-                        <img class="contract pt-10 h-auto max-w-xs lg:float-right" src="https://cdn-icons-png.freepik.com/512/15543/15543349.png">
-                        <p class="text-sm pt-6 text-center font-normal lg:text-right lg:text-xl lg:pt-12 lg:pl-16"> Составьте виртуальный контракт с собой, указав цель, дедлайн и шаги для её достижения. Добавьте залог, который потеряете в случае невыполнения, и поощрение за успех. Сделайте контракт серьёзным: распечатайте и разместите на видном месте для ежедневного напоминания.</p>
-                    <h1 class="text-2xl pt-96 lg:text-4xl lg:pt-96">3. Приглашайте своих близких.</h1> 
-                        <img class="invite pt-10 h-auto max-w-xs lg:float-right" src="https://cdn-icons-png.flaticon.com/512/4927/4927724.png">
-                        <p class="text-sm text-center pt-6 font-normal lg:text-right lg:text-xl lg:pt-12 lg:pl-16"> Привлеките наблюдателя — друга, родственника или коллегу, который будет следить за вашим прогрессом, напоминать о цели и проверять выполнение шагов. Обсудите с ним детали контракта и сроки. Ответственность перед другими повышает мотивацию. Если никого нет рядом, найдите партнёра онлайн.</p>
-                    <h1 class="text-2xl pt-96 lg:text-4xl lg:pt-96">4. Следите за результатами.</h1> 
-                        <img class="results pt-10 h-auto max-w-xs lg:float-left" src="https://cdn-icons-png.flaticon.com/512/1077/1077874.png">
-                        <p class="text-sm text-center font-normal lg:text-xl lg:pt-16 lg:pl-16"> Отмечайте свои успехи и двигайтесь к мечте! Ведите дневник или таблицу прогресса, где будете фиксировать каждый выполненный шаг и достигнутые результаты. Регулярно анализируйте свои действия: что работает хорошо, а что можно улучшить. Не забывайте поощрять себя за достижения, даже небольшие, чтобы поддерживать мотивацию. Каждый маленький успех приближает вас к большой цели, поэтому не игнорируйте важность регулярной обратной связи с самим собой.</p>
+                    <span class="before:block before:absolute before:-inset-6 before:-skew-y-2 before:-skew-x-12 before:bg-blue-600 relative inline-block ">
+                            <h1 class="font-semibold text-2xl lg:text-6xl relative ">Как это работает?</h1>
+                    </span>
+                        
+                        <h1 class="hiddden text-2xl pt-44 text-center lg:text-4xl lg:pt-44">1. Определите цель.</h1>            
+                                <img class="hiddden target pt-12 h-auto max-w-xs lg:float-left" src="https://cdn-icons-png.flaticon.com/512/167/167552.png">
+                             <p class="hiddden text-sm pt-12 text-center font-normal lg:text-left lg:text-xl lg:pt-12 lg:pr-16">Хотите похудеть, освоить новый навык или сэкономить деньги? Четко сформулируйте цель и дедлайн: вместо «хочу похудеть» укажите «сбросить 5 кг за 3 месяца». Подумайте, почему это важно и как изменится ваша жизнь. Разбейте цель на этапы, чтобы отслеживать прогресс. Убедитесь, что она измерима, реалистична и достижима в срок. Чем яснее цель, тем проще её достичь.</p>
+
+                        <h1 class="hiddden text-2xl pt-96 lg:text-4xl lg:pt-96">2. Создайте контракт.</h1> 
+                                <img class="hiddden contract pt-10 h-auto max-w-xs lg:float-right" src="https://cdn-icons-png.freepik.com/512/15543/15543349.png">
+                            <p class="hiddden text-sm pt-6 text-center font-normal lg:text-right lg:text-xl lg:pt-12 lg:pl-16"> Составьте виртуальный контракт с собой, указав цель, дедлайн и шаги для её достижения. Добавьте залог, который потеряете в случае невыполнения, и поощрение за успех. Сделайте контракт серьёзным: распечатайте и разместите на видном месте для ежедневного напоминания.</p>
+
+                        <h1 class="hiddden text-2xl pt-96 lg:text-4xl lg:pt-96">3. Приглашайте своих близких.</h1> 
+                                <img class="hiddden invite pt-10 h-auto max-w-xs lg:float-right" src="https://cdn-icons-png.flaticon.com/512/4927/4927724.png">
+                            <p class="hiddden text-sm text-center pt-6 font-normal lg:text-right lg:text-xl lg:pt-12 lg:pl-16"> Привлеките наблюдателя — друга, родственника или коллегу, который будет следить за вашим прогрессом, напоминать о цели и проверять выполнение шагов. Обсудите с ним детали контракта и сроки. Ответственность перед другими повышает мотивацию. Если никого нет рядом, найдите партнёра онлайн.</p>
+
+                        <h1 class="hiddden text-2xl pt-96 lg:text-4xl lg:pt-96">4. Следите за результатами.</h1> 
+                                <img class="hiddden results pt-10 h-auto max-w-xs lg:float-left" src="https://cdn-icons-png.flaticon.com/512/1077/1077874.png">
+                             <p class="hiddden text-sm text-center font-normal lg:text-xl lg:pt-16 lg:pl-16"> Отмечайте свои успехи и двигайтесь к мечте! Ведите дневник или таблицу прогресса, где будете фиксировать каждый выполненный шаг и достигнутые результаты. Регулярно анализируйте свои действия: что работает хорошо, а что можно улучшить. Не забывайте поощрять себя за достижения, даже небольшие, чтобы поддерживать мотивацию. Каждый маленький успех приближает вас к большой цели, поэтому не игнорируйте важность регулярной обратной связи с самим собой.</p>
+                            
                 </div>
-                <h1 class="text-2xl text-white lg:text-6xl pt-96 text-center">
+
+                <h1 class="hiddden text-2xl text-white lg:text-6xl pt-96 text-center">
                     Наши достижения
                 </h1>
-                <div class="blue" style="background-color: #0763EC;">
+
+                <div class="blue hiddden" style="background-color: #0763EC;">
                     <div class="icons flex text-white">
                         <div class="icon-block">
                             <img src="https://cdn-icons-png.flaticon.com/512/181/181645.png" alt="Dollar Icon">
@@ -68,8 +84,7 @@
                       <p class="flex-1 text-center">Контакты</p>
                       <p class="flex">© 2024</p>
                     </div>
-            </footer>
-                  
+            </footer>   
         </main>       
 </body>
 </html>
