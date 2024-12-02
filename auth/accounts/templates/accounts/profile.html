@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="{% static 'ForTailWindCSS/styleTW.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleForPA.css' %}">
+</head>
+<body style="background-color: #131313;">
+
+    <main class="main">
+
+        <!-- Блок с договорами -->
+        <div class="container1">
+            <!--
+             <a href="{% url 'contract1' %}" class="contract">Договор 1</a>
+            <a href="{% url 'contract2' %}" class="contract">Договор 2</a>
+            <a href="{% url 'contract3' %}" class="contract">Договор 3</a>
+            -->
+            <div class="contract"> Договор1</div>
+            <div class="contract"> Договор2</div>
+            <div class="contract"> Договор3</div>
+        </div>
+
+        <!-- Блок с информацией о пользователе -->
+        <div class="container2">
+
+            <!-- Фото профиля -->
+            <form method="POST" enctype="multipart/form-data" action="{% url 'update_profile' %}">
+                {% csrf_token %}
+                <label for="profile_picture">
+                    <img class="rounded-full" 
+                     alt="Аватар" 
+                     src="{% if user.profile.profile_picture %}{{ user.profile.profile_picture.url }}{% else %}{% static 'img/User.png' %}{% endif %}">
+                </label>
+
+                <input type="file" id="profile_picture" name="profile_picture" style="display: none;">
+                <button type="submit" class="logout-button">Обновить фото</button>
+            </form>
+
+            <!-- Данные пользователя -->
+            <h1>{{ user.username }}</h1>
+            <h1 class="tall">{{ user.email }}</h1>
+
+           
+            <a href="{% url 'logout' %}" class="logout-button">Выйти из аккаунта</a>
+        </div>
+    
+    </main>
+
+</body>
+</html>

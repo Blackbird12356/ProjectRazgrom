@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from .forms import UserRegistrationForm, UserLoginForm
+from accounts.models import Profile
 
 
 def register(request):
@@ -41,3 +42,42 @@ def logout_user(request):
     logout(request)
     messages.success(request, 'Вы вышли из системы.')
     return redirect('login')
+
+
+def profile(request):
+    """
+    Логика отображения личного кабинета.
+    """
+    # Передаем данные текущего пользователя в шаблон
+    if not hasattr(request.user, 'profile'):
+     Profile.objects.create(user=request.user)
+
+    return render(request, 'accounts/profile.html', {'user': request.user})
+
+
+def update_profile(request):
+    """
+    Обновляет фото профиля пользователя.
+    """
+    # Убедимся, что у пользователя есть профиль
+    if not hasattr(request.user, 'profile'):
+        Profile.objects.create(user=request.user)
+
+    if request.method == 'POST':
+        profile = request.user.profile
+        if 'profile_picture' in request.FILES:
+            profile.profile_picture = request.FILES['profile_picture']
+            profile.save()
+        return redirect('profile')
+    
+def contract1(request):
+    """Страница договора 1."""
+    return render(request, 'accounts/contract1.html')
+
+def contract2(request):
+    """Страница договора 2."""
+    return render(request, 'accounts/contract2.html')
+
+def contract3(request):
+    """Страница договора 3."""
+    return render(request, 'accounts/contract3.html')

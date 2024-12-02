@@ -1,0 +1,58 @@
+body{
+    margin: 70px;
+}
+ 
+ 
+.main {
+     display: flex;
+     justify-content: space-between;
+     background-color: gray;
+}
+ 
+.container1 {
+    width: 300px;
+}
+ 
+.container2 {
+     border: 5px solid #0763EC;
+     padding-top: 20px;
+     padding-left: 30px;
+     padding-right: 40px;
+     color: white;
+     
+}
+ 
+.contract{
+     background-color: gray;
+     color: white;
+     padding: 10px;
+     padding-bottom: 40px;
+     padding-right: 700px;
+     margin: 40px;
+     border: 3px solid #0763EC;
+}
+ 
+ 
+.rounded-full {
+     height: 100px;
+     width: 100px; 
+}
+ 
+.logout-button {
+     margin: 10px;
+     background-color: #0763EC; /* Красный цвет */
+     color: white;
+     border: none;
+     padding: 5px 10px;
+     font-size: 14px;
+     cursor: pointer;
+     border-radius: 5px;
+}
+ 
+.logout-button:hover {
+     background-color: #0651c1;
+}
+
+.tall{
+    font-size: 14px;
+}
