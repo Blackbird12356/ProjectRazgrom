@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+*{	
+	font-family: "Unbounded", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@media only screen and (max-width: 767px) {
+    .icons {
+        display: flex;
+        flex-direction: column; /* Горизонтальное расположение */
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-top: 10rem; /* Как у вас в изначальном коде */
+    }
+    .blue {
+        padding: 2rem; /* Внутренний отступ */
+        border-radius: 3rem; /* Округление углов */
+        max-width: 100%;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        
+    }
+    .icons img {
+        width: 80px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto; /* Сохраняем пропорции */
+        margin-right: auto !important;
+        margin-left: auto !important;
+
+        
+    }
+    .icons p {
+        display: flex;
+        font-size: 1rem; /* Размер шрифта для текста */
+        text-align: center; /* Оставляем текст по левому краю */
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .mountain {
+        width: 80px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto !important; /* Сохраняем пропорции */
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .icons {
+        display: flex;
+        flex-direction: row; /* Горизонтальное расположение */
+        justify-content: space-around; /* Равномерное распределение по ширине */
+        align-items: center; /* Вертикальное выравнивание элементов */
+        margin: auto;
+        margin-left: 14rem !important;
+        padding-top: 10rem; /* Как у вас в изначальном коде */
+        max-width: 100%; /* Динамическая ширина */
+        gap: 2rem; /* Расстояние между элементами */
+    }
+    .blue {
+        margin: auto;
+        width: 100%; /* Используем всю ширину экрана */
+        padding: 2rem; /* Внутренний отступ */
+        border-radius: 5rem; /* Округление углов */
+    }
+    .icons img {
+        width: 120px; /* Устанавливаем фиксированный размер для иконок */
+        height: auto; /* Сохраняем пропорции */
+    }
+    .icons p {
+        font-size: 1.2rem; /* Размер шрифта для текста */
+        margin-left: 0.5rem; /* Отступ от иконки */
+        text-align: left; /* Оставляем текст по левому краю */
+    }
+}
+
+@media only screen and (min-width: 1880px) {
+    .icons {
+        display: flex;
+        flex-direction: row;
+        margin-top: -27rem !important;
+		margin-left: 16rem !important;
+		gap: 13rem !important;
+    }
+    .blue {
+        margin: auto;
+        width: 89% !important;
+    }
+
+    .icons p {
+        font-size: 1.2rem; /* Размер шрифта для текста */
+        margin-left: 0.5rem; /* Отступ от иконки */
+        text-align: left; /* Оставляем текст по левому краю */
+        margin-top: 1rem;
+    }
+}
+
+
+.icons {
+	justify-content: space-between;
+	max-width: 10rem;
+	align-items: center;
+	margin-top: -26rem;
+	margin-left: 12rem;
+	gap: 2rem;
+  }
+
+.blue{
+	margin: auto;
+	padding-top: 20rem;
+	margin-top: 5rem;
+	width: 95%;
+}
+
+.hiddden {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+
+.showw {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
