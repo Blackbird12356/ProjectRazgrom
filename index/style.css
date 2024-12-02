@@ -112,3 +112,16 @@
 	margin-top: 5rem;
 	width: 95%;
 }
+
+.hiddden {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+
+.showw {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
