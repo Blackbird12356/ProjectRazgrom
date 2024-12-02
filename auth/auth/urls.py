@@ -16,14 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
-
-def home(request):
-    return HttpResponse("Добро пожаловать! Перейдите на <a href='/accounts/login/'>страницу входа</a> или <a href='/accounts/register/'>страницу регистрации</a>.")
+from django.views.generic import TemplateView  # Импортируем TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    path('', home, name='home'),  # Корневой маршрут
+    path('accounts/', include('accounts.urls')),  # Подключение маршрутов приложения accounts
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),  # Главная страница
 ]
-
