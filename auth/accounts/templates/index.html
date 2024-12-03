@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{% static '' %}">
     <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="app.js"></script>
+    <!-- <script defer src="app.js"></script>-->
+    <script defer src="{% static 'js/app.js' %}"></script>
 </head>
 <body class="flex-auto relative w-full h-screen" style="background-color: #131313;">
     <header>
@@ -60,19 +61,19 @@
                     </span>
                         
                         <h1 class="hiddden text-2xl pt-44 text-center lg:text-4xl lg:pt-44">1. Определите цель.</h1>            
-                                <img class="hiddden target pt-12 h-auto max-w-xs lg:float-left" src="https://cdn-icons-png.flaticon.com/512/167/167552.png">
+                                <img class="hiddden target pt-12 h-auto max-w-xs lg:float-left" src="{% static 'img/icon.png' %}" alt="иконка">
                              <p class="hiddden text-sm pt-12 text-center font-normal lg:text-left lg:text-xl lg:pt-12 lg:pr-16">Хотите похудеть, освоить новый навык или сэкономить деньги? Четко сформулируйте цель и дедлайн: вместо «хочу похудеть» укажите «сбросить 5 кг за 3 месяца». Подумайте, почему это важно и как изменится ваша жизнь. Разбейте цель на этапы, чтобы отслеживать прогресс. Убедитесь, что она измерима, реалистична и достижима в срок. Чем яснее цель, тем проще её достичь.</p>
 
                         <h1 class="hiddden text-2xl pt-96 lg:text-4xl lg:pt-96">2. Создайте контракт.</h1> 
-                                <img class="hiddden contract pt-10 h-auto max-w-xs lg:float-right" src="https://cdn-icons-png.freepik.com/512/15543/15543349.png">
+                                <img class="hiddden contract pt-10 h-auto max-w-xs lg:float-right" src="{% static 'img/icon1.png' %}" alt="Иконка">
                             <p class="hiddden text-sm pt-6 text-center font-normal lg:text-right lg:text-xl lg:pt-12 lg:pl-16"> Составьте виртуальный контракт с собой, указав цель, дедлайн и шаги для её достижения. Добавьте залог, который потеряете в случае невыполнения, и поощрение за успех. Сделайте контракт серьёзным: распечатайте и разместите на видном месте для ежедневного напоминания.</p>
 
                         <h1 class="hiddden text-2xl pt-96 lg:text-4xl lg:pt-96">3. Приглашайте своих близких.</h1> 
-                                <img class="hiddden invite pt-10 h-auto max-w-xs lg:float-right" src="https://cdn-icons-png.flaticon.com/512/4927/4927724.png">
+                                <img class="hiddden invite pt-10 h-auto max-w-xs lg:float-right" src="{% static 'img/icon2.png' %}" alt="ИкоНка">
                             <p class="hiddden text-sm text-center pt-6 font-normal lg:text-right lg:text-xl lg:pt-12 lg:pl-16"> Привлеките наблюдателя — друга, родственника или коллегу, который будет следить за вашим прогрессом, напоминать о цели и проверять выполнение шагов. Обсудите с ним детали контракта и сроки. Ответственность перед другими повышает мотивацию. Если никого нет рядом, найдите партнёра онлайн.</p>
 
                         <h1 class="hiddden text-2xl pt-96 lg:text-4xl lg:pt-96">4. Следите за результатами.</h1> 
-                                <img class="hiddden results pt-10 h-auto max-w-xs lg:float-left" src="https://cdn-icons-png.flaticon.com/512/1077/1077874.png">
+                                <img class="hiddden results pt-10 h-auto max-w-xs lg:float-left" src="{% static 'img/icon3.png' %}" alt="ИконкА">
                              <p class="hiddden text-sm text-center font-normal lg:text-xl lg:pt-16 lg:pl-16"> Отмечайте свои успехи и двигайтесь к мечте! Ведите дневник или таблицу прогресса, где будете фиксировать каждый выполненный шаг и достигнутые результаты. Регулярно анализируйте свои действия: что работает хорошо, а что можно улучшить. Не забывайте поощрять себя за достижения, даже небольшие, чтобы поддерживать мотивацию. Каждый маленький успех приближает вас к большой цели, поэтому не игнорируйте важность регулярной обратной связи с самим собой.</p>                    
                 </div>
 
@@ -83,15 +84,15 @@
                 <div class="blue hiddden" style="background-color: #0763EC;">
                     <div class="icons flex text-white">
                         <div class="icon-block">
-                            <img src="https://cdn-icons-png.flaticon.com/512/181/181645.png" alt="Dollar Icon">
+                            <img src="{% static 'img/Dollar.png' %}" alt="Dollar Icon">
                             <p class="text-xl">Выдано более миллиона тенге <br> на благотворительность</p>
                         </div>
                         <div class="icon-block">
-                            <img src="list.png" alt="List Icon">
+                            <img src="{% static 'img/list.png' %}" alt="List Icon">
                             <p class="text-xl">Зарегистрировались более 1000 <br> человек</p>
                         </div>
                         <div class="icon-block">
-                            <img class="mountain" src="goal.png" alt="Mountain Icon">
+                            <img class="mountain" src="{% static 'img/goal.png' %}" alt="Mountain Icon">
                             <p class="text-xl">Выполнено более 10000 целей</p>
                         </div>
                     </div>
