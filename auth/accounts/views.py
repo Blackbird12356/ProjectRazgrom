@@ -87,3 +87,7 @@ def contract2(request):
 def contract3(request):
     """Страница договора 3."""
     return render(request, 'accounts/contract3.html')
+
+def about(request):
+    """Страница 'О нас'."""
+    return render(request, 'accounts/about.html')
