@@ -14,4 +14,6 @@ urlpatterns = [
     path('contract3/', views.contract3, name='contract3'),
     path('', views.index, name='index'),  # Главная
     path('about/', views.about, name='about'),  # О нас
+    path('contacts/', views.contacts_view, name='contacts'),  # Имя маршрута - contacts
+
 ]

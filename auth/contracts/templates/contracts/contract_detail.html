@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Детали договора №{{ object.id }}</h2>
+<p><strong>Сумма:</strong> {{ object.amount }} USD</p>
+<p><strong>Фонд:</strong> {{ object.charity_name }}</p>
+<p><strong>Реквизиты фонда:</strong> {{ object.charity_account }}</p>
+<p><strong>Статус:</strong> 
+    <span id="contract-status">{{ object.status }}</span>
+</p>
+<p><strong>Дата завершения:</strong> {{ object.due_date }}</p>
+<a href="{% url 'contract_list' %}">Вернуться к списку</a>
+
+<!-- Оплата доступна только для договоров со статусом 'pending' -->
+{% if object.status == 'pending' %}
+<h3>Оплата</h3>
+<div id="card-element"></div> <!-- Элемент для ввода данных карты -->
+<div id="payment-status" style="margin-top: 10px; color: red;"></div>
+<button id="pay-button" style="margin-top: 10px;">Оплатить</button>
+
+<!-- Подключение Stripe -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe('{{ stripe_public_key }}'); // Публичный ключ Stripe
+    const elements = stripe.elements();
+
+    // Создаём элемент для ввода данных карты
+    const cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    document.getElementById('pay-button').addEventListener('click', async () => {
+        const button = document.getElementById('pay-button');
+        button.disabled = true; // Отключаем кнопку, чтобы избежать повторного клика
+        document.getElementById('payment-status').innerText = ''; // Очищаем статус
+
+        try {
+            // Создаём платёжное намерение через API
+            const response = await fetch('/api/payments/create_intent/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}' // Добавляем CSRF-токен для безопасности
+                },
+                body: JSON.stringify({ contract_id: {{ object.id }} })
+            });
+
+            const data = await response.json();
+
+            if (data.client_secret) {
+                // Подтверждаем платёж с введённой картой
+                const result = await stripe.confirmCardPayment(data.client_secret, {
+                    payment_method: { card: cardElement }
+                });
+
+                if (result.error) {
+                    // Ошибка подтверждения платежа
+                    document.getElementById('payment-status').innerText = 'Ошибка оплаты: ' + result.error.message;
+                } else {
+                    // Успешная оплата
+                    document.getElementById('payment-status').innerText = 'Оплата успешна!';
+                    document.getElementById('contract-status').innerText = 'completed'; // Обновляем статус
+                    setTimeout(() => window.location.reload(), 2000); // Перезагрузка страницы через 2 секунды
+                }
+            } else {
+                // Ошибка создания платёжного намерения
+                document.getElementById('payment-status').innerText = 'Ошибка сервера: ' + (data.error || 'Неизвестная ошибка');
+            }
+        } catch (error) {
+            // Ошибка выполнения запроса
+            document.getElementById('payment-status').innerText = 'Ошибка: ' + error.message;
+        } finally {
+            button.disabled = false; // Разблокируем кнопку
+        }
+    });
+</script>
+{% endif %}
+{% endblock %}

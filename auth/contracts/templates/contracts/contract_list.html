@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои договоры</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Мои договоры</h2>
+        <ul>
+            {% for contract in contracts %}
+                <li>
+                    <a href="{% url 'contract_detail' contract.id %}">
+                        Договор №{{ contract.id }} на {{ contract.amount }} USD
+                    </a> - {{ contract.status }}
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'contract_create' %}" class="create-link">Создать новый договор</a>
+    </div>
+</body>
+</html>

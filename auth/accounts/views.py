@@ -91,3 +91,7 @@ def contract3(request):
 def about(request):
     """Страница 'О нас'."""
     return render(request, 'accounts/about.html')
+
+def contacts_view(request):
+    """Страница 'Контакты'."""
+    return render(request, 'accounts/contacts.html')

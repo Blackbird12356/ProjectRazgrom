@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'rest_framework',
-    'users.apps.UsersConfig',
-    'contracts.apps.ContractsConfig',
+    'contracts',
     'payments.apps.PaymentsConfig',
 ]
+
+STRIPE_SECRET_KEY = "sk_test_51QRzLdGarB70Eu4SufBMyR9nJYU7JRsjvFsOGrNsL89AgLJc1hkDXJlZRhnUBgTRMz6K6zSGw8rWhzdpFRDQlsuK005Mz1ri3S"
+STRIPE_PUBLIC_KEY = "pk_test_51QRzLdGarB70Eu4SleUVS643SNdiYuM3OyMvqWOO45U4IagOUrXuF2XD88gxbS8yJAgXr5k8d9pUqF4NvcBjhZbm00uRiswPnR"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -66,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'auth.context_processors.stripe_public_key',
             ],
         },
     },

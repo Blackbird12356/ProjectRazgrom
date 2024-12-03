@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Оплата договора №{{ contract.id }}</h2>
+<p><strong>Сумма:</strong> {{ contract.amount }} USD</p>
+<p><strong>Благотворительный фонд:</strong> {{ contract.charity_name }}</p>
+<p><strong>Реквизиты фонда:</strong> {{ contract.charity_account }}</p>
+
+<!-- Элемент для ввода данных карты -->
+<div id="card-element"></div>
+<div id="card-errors" role="alert"></div>
+<button id="pay-button">Оплатить</button>
+<div id="payment-status"></div>
+
+<!-- Подключаем библиотеку Stripe -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    const stripe = Stripe('{{ stripe_public_key }}'); // Публичный ключ Stripe
+    const elements = stripe.elements();
+
+    // Создаём элемент для ввода данных карты
+    const cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    document.getElementById('pay-button').addEventListener('click', async () => {
+        // Блокируем кнопку, чтобы предотвратить повторные клики
+        document.getElementById('pay-button').disabled = true;
+
+        try {
+            // Создаём платёжное намерение через сервер
+            const response = await fetch('/api/payments/create_intent/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}' // CSRF-токен
+                },
+                body: JSON.stringify({ contract_id: {{ contract.id }} }) // Передаём ID договора
+            });
+
+            const data = await response.json();
+
+            if (data.client_secret) {
+                // Подтверждаем платёж с использованием введённых данных карты
+                const result = await stripe.confirmCardPayment(data.client_secret, {
+                    payment_method: {
+                        card: cardElement, // Передаём данные карты
+                    }
+                });
+
+                if (result.error) {
+                    // Показываем ошибку, если платёж не прошёл
+                    document.getElementById('payment-status').innerText = 'Ошибка оплаты: ' + result.error.message;
+                } else {
+                    // Показываем успех, если платёж прошёл
+                    document.getElementById('payment-status').innerText = 'Оплата успешна!';
+                }
+            } else {
+                document.getElementById('payment-status').innerText = 'Ошибка сервера: ' + data.error;
+            }
+        } catch (error) {
+            document.getElementById('payment-status').innerText = 'Ошибка: ' + error.message;
+        } finally {
+            // Разблокируем кнопку
+            document.getElementById('pay-button').disabled = false;
+        }
+    });
+</script>
+{% endblock %}

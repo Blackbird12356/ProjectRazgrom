@@ -36,7 +36,7 @@
                 {% if user.is_authenticated %}
                     <h1 class="text-3xl font-normal px-7  lg:text-6xl lg:pr-80 lg:pt-2 lg:px-4">Оформить</h1>
                     <h1 class="text-2xl font-semibold px-4 pt-6 sm:text-5xl sm:pr-40 sm:pt-9">
-                        <a href="{% url 'register' %}" 
+                        <a href="{% url 'contract_create' %}" 
                             class="no-underline text-white bg-[#0763EC] hover:bg-[#073882] hover:text-white rounded-xl px-2 py-1 transition-shadow duration-300 shadow-none hover:shadow-xl hover:shadow-[#073c82]">
                                Договор
                         </a>
@@ -99,8 +99,8 @@
                 </div>
             <footer class="text-center">
                     <div class="flex justify-between items-center text-white mt-36 text-sm px-6 mb-4 lg:text-2xl">
-                      <p class="flex-1 text-center">Контакты</p>
-                      <p class="flex">© 2024</p>
+                        <p class="flex-1"><a href="{% url 'contacts' %}" class="no-underline text-white px-1 hover:text-[#90bbfc] transition duration-300">Контакты</a></p>
+                        <p class="flex">© 2024</p>
                     </div>
             </footer>   
         </main>       
