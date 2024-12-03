@@ -5,6 +5,12 @@ from .forms import UserRegistrationForm, UserLoginForm
 from accounts.models import Profile
 
 
+
+def index(request):
+    """Главная страница."""
+    return render(request, 'index.html')
+
+
 def register(request):
     """Регистрация пользователя."""
     if request.method == 'POST':

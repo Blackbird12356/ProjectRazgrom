@@ -12,4 +12,5 @@ urlpatterns = [
     path('contract1/', views.contract1, name='contract1'),
     path('contract2/', views.contract2, name='contract2'),
     path('contract3/', views.contract3, name='contract3'),
+    path('', views.index, name='index'),
 ]
