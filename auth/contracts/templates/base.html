@@ -1,11 +1,34 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Stickk Clone{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '' %}">
+    <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="flex-auto relative w-full h-screen" style="background-color: #131313;">
+    <header>
+        <div>
+            <nav class="flex items-center">
+                <ul class="flex-1 text-center pt-5 text-xl font-normal">
+                    <li class="list-none inline-block px-10 pb-5"><a href="{% url 'index' %}" class="no-underline text-white px-1 hover:text-[#90bbfc] transition duration-300">Домой</a></li>
+                    <li class="list-none inline-block px-10"><a href="{% url 'about' %}" class="no-underline text-white px-1 hover:text-[#90bbfc] transition duration-300">О нас</a></li>
+                    {% if user.is_authenticated %}
+                      <li class="list-none inline-block px-10"> <a href="{% url 'profile' %}" class="no-underline text-white px-1 hover:text-[#90bbfc] transition duration-300"> Личный кабинет</a></li>
+                      
+                       {% else %}
+                         <li class="list-none inline-block px-10"> <a href="{% url 'login' %}" class="no-underline text-white px-1 hover:text-[#90bbfc] transition duration-300"> Войти</a></li>
+                    {% endif %}
+    
+    
+                    <hr class="sm:m-auto mt-6" width="100%" size="2">
+                </ul>
+            </nav>
+        </div>
+        </header>
     <nav>
         <ul>
             <li><a href="{% url 'contract_list' %}">Мои договоры</a></li>
