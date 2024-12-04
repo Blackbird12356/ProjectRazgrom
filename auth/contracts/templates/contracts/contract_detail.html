@@ -2,6 +2,7 @@
 
 {% block content %}
 <h2>Детали договора №{{ object.id }}</h2>
+<p><strong>Цель:</strong> {{ object.goal }}</p>
 <p><strong>Сумма:</strong> {{ object.amount }} USD</p>
 <p><strong>Фонд:</strong> {{ object.charity_name }}</p>
 <p><strong>Реквизиты фонда:</strong> {{ object.charity_account }}</p>

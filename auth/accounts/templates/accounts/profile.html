@@ -36,10 +36,8 @@
         <!-- второй шкебеде -->
         <section class="container2">
             <h2 class="contracts-title">Договоры</h2>
-            <a href="#" class="contract">Договор 1</a>
-            <a href="#" class="contract">Договор 2</a>
-            <a href="#" class="contract">Договор 3</a>
-
+            <a href="{% url 'contract_list' %}" class="contract">Мои договоры</a>
+            
             <a href="{% url 'logout' %}" class="logout-button">Выйти</a>
         </section>
     </main>
