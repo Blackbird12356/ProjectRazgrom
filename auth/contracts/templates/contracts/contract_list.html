@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои договоры</title>
-   
-</head>
-<body>
-    <div class="container">
-        <h2>Мои договоры</h2>
-        <ul>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-blue-600 p-8 rounded-lg w-96">
+        <h2 class="text-2xl font-bold mb-6 text-center">Мои договоры</h2>
+        <ul class="space-y-2">
             {% for contract in contracts %}
-                <li>
-                    <a href="{% url 'contract_detail' contract.id %}">
-                        Договор №{{ contract.id }} на {{ contract.amount }} USD
-                    </a> - {{ contract.status }}
+                <li class="text-white">
+                    <a href="{% url 'contract_detail' contract.id %}" class="hover:text-[#90bbfc]">
+                        Договор №{{ contract.id }} на {{ contract.amount }} USD - {{ contract.status }}
+                    </a>
                 </li>
             {% endfor %}
         </ul>
-        <a href="{% url 'contract_create' %}" class="create-link">Создать новый договор</a>
+        <a href="{% url 'contract_create' %}" class="block text-center mt-4 bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold">
+            Новый договор
+        </a>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
