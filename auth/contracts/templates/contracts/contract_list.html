@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="flex items-center justify-center min-h-screen">
-    <div class="bg-blue-600 p-8 rounded-lg w-96 mt-8">
+    <div class="bg-blue-600 p-8 rounded-lg w-96 mt-8" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
         <h2 class="text-2xl font-bold mb-6 text-cente">Мои договоры</h2>
         <ul class="space-y-2">
             {% for contract in contracts %}
@@ -13,7 +13,7 @@
                 </li>
             {% endfor %}
         </ul>
-        <a href="{% url 'contract_create' %}" class="block text-center mt-4 bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg">
+        <a href="{% url 'contract_create' %}" class="block text-center mt-4 bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
             Новый договор
         </a>
     </div>

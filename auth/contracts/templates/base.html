@@ -29,25 +29,25 @@
             </nav>
         </div>
         </header>
-        <nav class="bg-blue-600 p-4 rounded-lg w-96 mx-auto mt-4">
+        <nav class="bg-blue-600 p-4 rounded-lg w-96 mx-auto mt-4" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
             <ul class="space-y-4">
                 <li>
                     <a href="{% url 'contract_list' %}" 
-                       class="block text-center bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                       class="block text-center bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
                         Мои договоры
                     </a>
                 </li>
                 {% if user.is_authenticated %}
                     <li>
                         <a href="/admin/logout/" 
-                           class="block text-center bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                           class="block text-center bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
                             Выйти
                         </a>
                     </li>
                 {% else %}
                     <li>
                         <a href="/admin/login/" 
-                           class="block text-center bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                           class="block text-center bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
                             Войти
                         </a>
                     </li>

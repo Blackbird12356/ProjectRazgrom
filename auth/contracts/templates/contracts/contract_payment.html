@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="flex items-center justify-center min-h-screen">
-    <div class="bg-blue-600 p-8 rounded-lg w-96">
+    <div class="bg-blue-600 p-8 rounded-lg w-96" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
         <h2 class="text-2xl font-bold mb-6 text-center">Оплата договора №{{ contract.id }}</h2>
         <p><strong>Сумма:</strong> {{ contract.amount }} USD</p>
         <p><strong>Благотворительный фонд:</strong> {{ contract.charity_name }}</p>
@@ -11,7 +11,7 @@
             <div id="card-element" class="p-2 bg-white rounded"></div>
             <div id="card-errors" role="alert" class="text-red-500 mt-2"></div>
         </div>
-        <button id="pay-button" class="w-full mt-4 bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg">
+        <button id="pay-button" class="w-full mt-4 bg-blue-700 hover:bg-blue-800 py-2 rounded text-white font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
             Оплатить
         </button>
         <div id="payment-status" class="text-center mt-4 text-white"></div>
