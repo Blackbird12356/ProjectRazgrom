@@ -29,6 +29,7 @@
             </nav>
         </div>
         </header>
+<<<<<<< Updated upstream
         <nav class="bg-blue-600 p-4 rounded-lg w-96 mx-auto mt-4" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
             <ul class="space-y-4">
                 <li>
@@ -56,6 +57,18 @@
         </nav>
         
         
+=======
+    <nav>
+        <ul class="text-white">
+            <li><a href="{% url 'contract_list' %}">Мои договоры</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="/admin/logout/">Выйти</a></li>
+            {% else %}
+                <li><a href="/admin/login/">Войти</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+>>>>>>> Stashed changes
     {% block content %}{% endblock %}
 </body>
 </html>
