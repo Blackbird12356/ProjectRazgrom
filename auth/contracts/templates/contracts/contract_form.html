@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<<<<<<< Updated upstream
 <div class="flex items-center justify-center min-h-screen">
     <div class=" p-8 rounded-lg w-96" style="background: linear-gradient(133deg, rgba(114,123,186,1) 7%, rgba(54,72,196,1) 26%, rgba(9,67,249,1) 44%, rgba(10,61,222,1) 60%, rgba(65,98,201,1) 76%, rgba(140,165,244,1) 88%);">
         <h2 class="text-2xl font-bold mb-6 text-center text-white">Создать договор</h2>
@@ -49,14 +48,3 @@
 
 
 
-=======
-<h2 class="text-white">Создать договор</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="text-white">Создать</button>
-</form>
-{% endblock %}
-
-<script src="https://cdn.tailwindcss.com"></script>
->>>>>>> Stashed changes
